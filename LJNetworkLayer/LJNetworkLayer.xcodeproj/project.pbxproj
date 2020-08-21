@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		5582DAC624F02CDE00863DA4 /* LJNetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5582DAD624F02D1F00863DA4 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */; };
+		5582DAD724F02D1F00863DA4 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACD24F02D1F00863DA4 /* ImageDownload.swift */; };
+		5582DAD824F02D1F00863DA4 /* LJError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACE24F02D1F00863DA4 /* LJError.swift */; };
+		5582DAD924F02D1F00863DA4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */; };
+		5582DADA24F02D1F00863DA4 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */; };
+		5582DADB24F02D1F00863DA4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD124F02D1F00863DA4 /* Request.swift */; };
+		5582DADC24F02D1F00863DA4 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */; };
+		5582DADD24F02D1F00863DA4 /* UploadLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD324F02D1F00863DA4 /* UploadLayer.swift */; };
+		5582DADE24F02D1F00863DA4 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */; };
+		5582DADF24F02D1F00863DA4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD524F02D1F00863DA4 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5582DAC124F02CDE00863DA4 /* LJNetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LJNetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJNetworkLayer.h; sourceTree = "<group>"; };
 		5582DAC524F02CDE00863DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
+		5582DACD24F02D1F00863DA4 /* ImageDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		5582DACE24F02D1F00863DA4 /* LJError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJError.swift; sourceTree = "<group>"; };
+		5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		5582DAD124F02D1F00863DA4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		5582DAD324F02D1F00863DA4 /* UploadLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadLayer.swift; sourceTree = "<group>"; };
+		5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		5582DAD524F02D1F00863DA4 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,16 @@
 			isa = PBXGroup;
 			children = (
 				5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */,
+				5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */,
+				5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */,
+				5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */,
+				5582DACD24F02D1F00863DA4 /* ImageDownload.swift */,
+				5582DACE24F02D1F00863DA4 /* LJError.swift */,
+				5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */,
+				5582DAD124F02D1F00863DA4 /* Request.swift */,
+				5582DAD524F02D1F00863DA4 /* Session.swift */,
+				5582DAD324F02D1F00863DA4 /* UploadLayer.swift */,
+				5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */,
 				5582DAC524F02CDE00863DA4 /* Info.plist */,
 			);
 			path = LJNetworkLayer;
@@ -95,6 +125,7 @@
 				TargetAttributes = {
 					5582DAC024F02CDE00863DA4 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5582DADF24F02D1F00863DA4 /* Session.swift in Sources */,
+				5582DAD924F02D1F00863DA4 /* HTTPMethod.swift in Sources */,
+				5582DADB24F02D1F00863DA4 /* Request.swift in Sources */,
+				5582DADC24F02D1F00863DA4 /* URLSession+Extension.swift in Sources */,
+				5582DAD824F02D1F00863DA4 /* LJError.swift in Sources */,
+				5582DADE24F02D1F00863DA4 /* DispatchQueue+Extension.swift in Sources */,
+				5582DAD624F02D1F00863DA4 /* DiscardableImageCacheItem.swift in Sources */,
+				5582DADA24F02D1F00863DA4 /* NetworkLayer.swift in Sources */,
+				5582DADD24F02D1F00863DA4 /* UploadLayer.swift in Sources */,
+				5582DAD724F02D1F00863DA4 /* ImageDownload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -260,6 +301,7 @@
 		5582DACA24F02CDE00863DA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C2V8MZT3S7;
@@ -276,6 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.linto.LJNetworkLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +327,7 @@
 		5582DACB24F02CDE00863DA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C2V8MZT3S7;
