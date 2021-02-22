@@ -2,7 +2,7 @@
 //  LJError.swift
 //  NetworkLayer
 //
-//  Created by linto jacob on 20/07/20.
+//  Created by linto jacob on 24/08/20.
 //  Copyright © 2020 linto. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ public enum CustomError: Error {
 }
 // MARK: - Custom Error Description
 extension CustomError: LocalizedError {
-    public var localizedDescription: String {
+    public var failureReason: String? {
         switch self {
         case .failedToCreateRequest: return NSLocalizedString("Unable to create the URLRequest object", comment: "")
         case .failedToCreateBoundary: return NSLocalizedString("Unable to create boundary string", comment: "")
@@ -60,7 +60,7 @@ public enum ResponseSerializationFailureReason: Error {
 
 // MARK: -Custom Error Description
 extension GeneralFailure: LocalizedError {
-    public var localizedDescription: String {
+    public var failureReason: String? {
         switch self {
         case .failedToCreateRequest: return "Unable to create the URLRequest object"
         case .failedToCreateBoundary: return "Unable to create boundary string"
@@ -75,7 +75,7 @@ extension GeneralFailure: LocalizedError {
 
 
 extension ResponseSerializationFailureReason: LocalizedError {
-    var localizedDescription: String {
+    public var failureReason: String? {
         switch self {
         case .inputDataNilOrZeroLength:
             return "Response could not be serialized, input data was nil or zero length."

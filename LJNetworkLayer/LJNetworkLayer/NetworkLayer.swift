@@ -2,7 +2,7 @@
 //  NetworkLayer.swift
 //  lintoResume
 //
-//  Created by linto jacob on 14/07/20.
+//  Created by linto jacob on 24/08/20.
 //  Copyright © 2020 linto. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 public typealias NetworkCompletionHandler = (Data?, URLResponse?, Error?) -> Void
-public typealias ErrorHandler = (Error) -> Void
-public typealias ErrorHandlerTest = (Error, Data?) -> Void
+public typealias ErrorHandler = (Error?, [String: Any]?) -> Void
+
 
 
 
@@ -19,12 +19,11 @@ public typealias Parameters = [String: Any]
 public typealias HTTHeader = [String: String]
 
 
-public let LJ = NetworkLayer.default
-
+public let NL = NetworkLayer.default
 
 
 public enum FinalResult {
-      case success(Data)
+      case success(NSDictionary)
       case failure(Error)
   }
 
@@ -35,7 +34,7 @@ final public class NetworkLayer: NSObject {
     public static let `default` = NetworkLayer()
     
     private let session = Session.default
-    private let uploadFile = Upload.default
+    public let uploadFile = Upload.default
    
     
 
@@ -48,7 +47,6 @@ final public class NetworkLayer: NSObject {
                                 headers: HTTHeader = [:],
                                 successHandler: @escaping (T) -> Void,
                                 errorHandler: @escaping ErrorHandler) {
-        
         session.request(toURL: url, method: method, parameters: parameters, headers: headers, successHandler: successHandler, errorHandler: errorHandler)
      
     }
@@ -73,17 +71,26 @@ final public class NetworkLayer: NSObject {
                       method: HTTPMethod = .get,
                       parameters: Parameters = [:],
                       headers: HTTHeader = [:],
-                      completion: @escaping (FinalResult) -> Void) {
+                      completion: @escaping (FinalResult) -> Void,errorHandler: @escaping ErrorHandler) {
         
-        session.generalRequest(toURL: url, method: method, parameters: parameters, headers: headers, completion: completion)
+        session.generalRequest(toURL: url, method: method, parameters: parameters, headers: headers, completion: completion, errorHandler: errorHandler)
       
     }
     
-  
+    public func generalRequestEncode<Parameters: Encodable>(toURL url: String,
+                      method: HTTPMethod = .get,
+                      parameters: Parameters? = nil,
+                      headers: HTTHeader = [:],
+                      completion: @escaping (FinalResult) -> Void) {
+        
+        session.generalRequestEncode(toURL: url, method: method, parameters: parameters, headers: headers, completion: completion)
+      
+    }
     
     
-    func upload(files: [Upload.FileInfo], toURL url: URL, withHttpMethod httpMethod: HTTPMethod, completion: @escaping(_ result: Upload.Results, _ failedFiles: [String]?) -> Void) {
-        uploadFile.upload(files: files, toURL: url, withHttpMethod: httpMethod, completion: completion)
+    
+    public func upload(files: [Upload.FileInfo], toURL url: URL, withHttpMethod httpMethod: HTTPMethod, devKey: String,completion: @escaping(_ result: Upload.Results, _ failedFiles: [String]?) -> Void) {
+        uploadFile.upload(files: files, toURL: url, withHttpMethod: httpMethod, devKey: devKey, completion: completion)
     }
   
 }

@@ -8,32 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		5582DAC624F02CDE00863DA4 /* LJNetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5582DAD624F02D1F00863DA4 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */; };
-		5582DAD724F02D1F00863DA4 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACD24F02D1F00863DA4 /* ImageDownload.swift */; };
-		5582DAD824F02D1F00863DA4 /* LJError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACE24F02D1F00863DA4 /* LJError.swift */; };
-		5582DAD924F02D1F00863DA4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */; };
-		5582DADA24F02D1F00863DA4 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */; };
-		5582DADB24F02D1F00863DA4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD124F02D1F00863DA4 /* Request.swift */; };
-		5582DADC24F02D1F00863DA4 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */; };
-		5582DADD24F02D1F00863DA4 /* UploadLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD324F02D1F00863DA4 /* UploadLayer.swift */; };
-		5582DADE24F02D1F00863DA4 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */; };
-		5582DADF24F02D1F00863DA4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582DAD524F02D1F00863DA4 /* Session.swift */; };
+		5595038B25E3B9EE00284726 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595037C25E3B9ED00284726 /* Session.swift */; };
+		5595038D25E3B9EE00284726 /* LJError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595037E25E3B9ED00284726 /* LJError.swift */; };
+		5595038E25E3B9EE00284726 /* UploadLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595037F25E3B9ED00284726 /* UploadLayer.swift */; };
+		5595038F25E3B9EE00284726 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038025E3B9EE00284726 /* HTTPMethod.swift */; };
+		5595039025E3B9EE00284726 /* ReachabilityObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038225E3B9EE00284726 /* ReachabilityObserverDelegate.swift */; };
+		5595039125E3B9EE00284726 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038325E3B9EE00284726 /* Reachability.swift */; };
+		5595039225E3B9EE00284726 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038425E3B9EE00284726 /* URLSession+Extension.swift */; };
+		5595039325E3B9EE00284726 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038525E3B9EE00284726 /* Request.swift */; };
+		5595039525E3B9EE00284726 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038725E3B9EE00284726 /* DispatchQueue+Extension.swift */; };
+		5595039625E3B9EE00284726 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038825E3B9EE00284726 /* NetworkLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5582DAC124F02CDE00863DA4 /* LJNetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LJNetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJNetworkLayer.h; sourceTree = "<group>"; };
 		5582DAC524F02CDE00863DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
-		5582DACD24F02D1F00863DA4 /* ImageDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
-		5582DACE24F02D1F00863DA4 /* LJError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJError.swift; sourceTree = "<group>"; };
-		5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
-		5582DAD124F02D1F00863DA4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
-		5582DAD324F02D1F00863DA4 /* UploadLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadLayer.swift; sourceTree = "<group>"; };
-		5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
-		5582DAD524F02D1F00863DA4 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5595037C25E3B9ED00284726 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5595037E25E3B9ED00284726 /* LJError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJError.swift; sourceTree = "<group>"; };
+		5595037F25E3B9ED00284726 /* UploadLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadLayer.swift; sourceTree = "<group>"; };
+		5595038025E3B9EE00284726 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5595038225E3B9EE00284726 /* ReachabilityObserverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityObserverDelegate.swift; sourceTree = "<group>"; };
+		5595038325E3B9EE00284726 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5595038425E3B9EE00284726 /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		5595038525E3B9EE00284726 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5595038725E3B9EE00284726 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		5595038825E3B9EE00284726 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,19 +67,27 @@
 			isa = PBXGroup;
 			children = (
 				5582DAC424F02CDE00863DA4 /* LJNetworkLayer.h */,
-				5582DACC24F02D1F00863DA4 /* DiscardableImageCacheItem.swift */,
-				5582DAD424F02D1F00863DA4 /* DispatchQueue+Extension.swift */,
-				5582DACF24F02D1F00863DA4 /* HTTPMethod.swift */,
-				5582DACD24F02D1F00863DA4 /* ImageDownload.swift */,
-				5582DACE24F02D1F00863DA4 /* LJError.swift */,
-				5582DAD024F02D1F00863DA4 /* NetworkLayer.swift */,
-				5582DAD124F02D1F00863DA4 /* Request.swift */,
-				5582DAD524F02D1F00863DA4 /* Session.swift */,
-				5582DAD324F02D1F00863DA4 /* UploadLayer.swift */,
-				5582DAD224F02D1F00863DA4 /* URLSession+Extension.swift */,
+				5595038725E3B9EE00284726 /* DispatchQueue+Extension.swift */,
+				5595038025E3B9EE00284726 /* HTTPMethod.swift */,
+				5595037E25E3B9ED00284726 /* LJError.swift */,
+				5595038825E3B9EE00284726 /* NetworkLayer.swift */,
+				5595038125E3B9EE00284726 /* Reachability */,
+				5595038525E3B9EE00284726 /* Request.swift */,
+				5595037C25E3B9ED00284726 /* Session.swift */,
+				5595037F25E3B9ED00284726 /* UploadLayer.swift */,
+				5595038425E3B9EE00284726 /* URLSession+Extension.swift */,
 				5582DAC524F02CDE00863DA4 /* Info.plist */,
 			);
 			path = LJNetworkLayer;
+			sourceTree = "<group>";
+		};
+		5595038125E3B9EE00284726 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				5595038225E3B9EE00284726 /* ReachabilityObserverDelegate.swift */,
+				5595038325E3B9EE00284726 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,12 +128,12 @@
 		5582DAB824F02CDE00863DA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = linto;
 				TargetAttributes = {
 					5582DAC024F02CDE00863DA4 = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -162,16 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5582DADF24F02D1F00863DA4 /* Session.swift in Sources */,
-				5582DAD924F02D1F00863DA4 /* HTTPMethod.swift in Sources */,
-				5582DADB24F02D1F00863DA4 /* Request.swift in Sources */,
-				5582DADC24F02D1F00863DA4 /* URLSession+Extension.swift in Sources */,
-				5582DAD824F02D1F00863DA4 /* LJError.swift in Sources */,
-				5582DADE24F02D1F00863DA4 /* DispatchQueue+Extension.swift in Sources */,
-				5582DAD624F02D1F00863DA4 /* DiscardableImageCacheItem.swift in Sources */,
-				5582DADA24F02D1F00863DA4 /* NetworkLayer.swift in Sources */,
-				5582DADD24F02D1F00863DA4 /* UploadLayer.swift in Sources */,
-				5582DAD724F02D1F00863DA4 /* ImageDownload.swift in Sources */,
+				5595039625E3B9EE00284726 /* NetworkLayer.swift in Sources */,
+				5595039125E3B9EE00284726 /* Reachability.swift in Sources */,
+				5595038D25E3B9EE00284726 /* LJError.swift in Sources */,
+				5595039025E3B9EE00284726 /* ReachabilityObserverDelegate.swift in Sources */,
+				5595039225E3B9EE00284726 /* URLSession+Extension.swift in Sources */,
+				5595039525E3B9EE00284726 /* DispatchQueue+Extension.swift in Sources */,
+				5595038E25E3B9EE00284726 /* UploadLayer.swift in Sources */,
+				5595038F25E3B9EE00284726 /* HTTPMethod.swift in Sources */,
+				5595039325E3B9EE00284726 /* Request.swift in Sources */,
+				5595038B25E3B9EE00284726 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +212,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -229,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -267,6 +276,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -286,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
