@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LJNetworkLayer"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "A generic network layer in iOS with Swift 5 using protocol programming"
   s.description  = "This is an easy setup for networking in iOS without any third party framework. Helps you make GET, POST, DELETE, PUT, etc calls and decode the JSON response to required model type without too much of boilerplate code."
   s.homepage     = "https://github.com/lintocj/LJNetworkLayer"
