@@ -19,9 +19,6 @@ public typealias Parameters = [String: Any]
 public typealias HTTHeader = [String: String]
 
 
-public let NL = NetworkLayer.default
-
-
 public enum FinalResult {
       case success(NSDictionary)
       case failure(Error)
@@ -31,7 +28,7 @@ let genericError = "Something went wrong. Please try again later"
 
 
 public enum LJ{
-    public func request<T: Decodable>(toURL url: String,
+    public static func request<T: Decodable>(toURL url: String,
                                method: HTTPMethod = .get,
                                parameters: Parameters = [:],
                                headers: HTTHeader = [:],
@@ -45,7 +42,7 @@ public enum LJ{
    
    
    
-    public func requestEncode<Result: Decodable, Parameters: Encodable>(toURL url: String,
+    public static func requestEncode<Result: Decodable, Parameters: Encodable>(toURL url: String,
                                    method: HTTPMethod = .get,
                                    parameters: Parameters? = nil,
                                    headers: HTTHeader = [:],
@@ -57,7 +54,7 @@ public enum LJ{
        
     
    
-   public func generalRequest(toURL url: String,
+   public static func generalRequest(toURL url: String,
                      method: HTTPMethod = .get,
                      parameters: Parameters = [:],
                      headers: HTTHeader = [:],
@@ -67,7 +64,7 @@ public enum LJ{
      
    }
    
-   public func generalRequestEncode<Parameters: Encodable>(toURL url: String,
+   public static func generalRequestEncode<Parameters: Encodable>(toURL url: String,
                      method: HTTPMethod = .get,
                      parameters: Parameters? = nil,
                      headers: HTTHeader = [:],
@@ -79,7 +76,7 @@ public enum LJ{
    
    
    
-   public func upload(files: [Upload.FileInfo], toURL url: URL, withHttpMethod httpMethod: HTTPMethod, devKey: String,completion: @escaping(_ result: Upload.Results, _ failedFiles: [String]?) -> Void) {
+   public static func upload(files: [Upload.FileInfo], toURL url: URL, withHttpMethod httpMethod: HTTPMethod, devKey: String,completion: @escaping(_ result: Upload.Results, _ failedFiles: [String]?) -> Void) {
     Upload.default.upload(files: files, toURL: url, withHttpMethod: httpMethod, devKey: devKey, completion: completion)
    }
  
@@ -87,22 +84,6 @@ public enum LJ{
 
 
 
-final public class NetworkLayer: NSObject {
-    
-    
-   
-    public static let `default` = NetworkLayer()
-    
-    private let session = Session.default
-    public let uploadFile = Upload.default
-   
-    
-
-    private var backgroundSession: URLSession!
-
-
-     
-}
 
 
 
