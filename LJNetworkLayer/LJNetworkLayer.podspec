@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Linto Jacob" => "lintojacob2009@gmail.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "https://github.com/lintocj/LJNetworkLayer.git", :tag => "1.1.1" }
+  s.source       = { :git => "https://github.com/lintocj/LJNetworkLayer.git", :tag => "1.2" }
   s.source_files = "LJNetworkLayer/**/*.swift"
   s.swift_version = "5.0"
   s.frameworks = "UIKit"
