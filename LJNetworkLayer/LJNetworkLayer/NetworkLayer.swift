@@ -17,6 +17,8 @@ public typealias ErrorHandler = (Error?, [String: Any]?) -> Void
 
 public typealias Parameters = [String: Any]
 public typealias HTTHeader = [String: String]
+public typealias CompletionHandler = (_ success: UIImageView?, _ error: Error?) -> Void
+
 
 
 public enum FinalResult {
@@ -79,6 +81,11 @@ public enum LJ{
    public static func upload(files: [Upload.FileInfo], toURL url: URL, withHttpMethod httpMethod: HTTPMethod, devKey: String,completion: @escaping(_ result: Upload.Results, _ failedFiles: [String]?) -> Void) {
     Upload.default.upload(files: files, toURL: url, withHttpMethod: httpMethod, devKey: devKey, completion: completion)
    }
+    
+    
+    public static func loadImageUsingCache(imageFile : UIImageView,withUrl urlString : String, completion: @escaping CompletionHandler){
+        ImageCacheFromURL.default.loadImageUsingCache(imageFile: imageFile, withUrl: urlString, completion: completion)
+    }
  
 }
 

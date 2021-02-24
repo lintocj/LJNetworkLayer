@@ -18,6 +18,7 @@
 		5595039325E3B9EE00284726 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038525E3B9EE00284726 /* Request.swift */; };
 		5595039525E3B9EE00284726 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038725E3B9EE00284726 /* DispatchQueue+Extension.swift */; };
 		5595039625E3B9EE00284726 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595038825E3B9EE00284726 /* NetworkLayer.swift */; };
+		55EAECEC25E6C5F200197DAB /* ImageCacheFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EAECEB25E6C5F200197DAB /* ImageCacheFromURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5595038525E3B9EE00284726 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		5595038725E3B9EE00284726 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		5595038825E3B9EE00284726 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		55EAECEB25E6C5F200197DAB /* ImageCacheFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheFromURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				5595037F25E3B9ED00284726 /* UploadLayer.swift */,
 				5595038425E3B9EE00284726 /* URLSession+Extension.swift */,
 				5582DAC524F02CDE00863DA4 /* Info.plist */,
+				55EAECEB25E6C5F200197DAB /* ImageCacheFromURL.swift */,
 			);
 			path = LJNetworkLayer;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				5595039525E3B9EE00284726 /* DispatchQueue+Extension.swift in Sources */,
 				5595038E25E3B9EE00284726 /* UploadLayer.swift in Sources */,
 				5595038F25E3B9EE00284726 /* HTTPMethod.swift in Sources */,
+				55EAECEC25E6C5F200197DAB /* ImageCacheFromURL.swift in Sources */,
 				5595039325E3B9EE00284726 /* Request.swift in Sources */,
 				5595038B25E3B9EE00284726 /* Session.swift in Sources */,
 			);
@@ -314,7 +318,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.2;
+				CURRENT_PROJECT_VERSION = 2.4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SEYNXETA63;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -346,7 +350,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.2;
+				CURRENT_PROJECT_VERSION = 2.4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SEYNXETA63;
 				DYLIB_COMPATIBILITY_VERSION = 1;
