@@ -78,8 +78,8 @@
 				5595037C25E3B9ED00284726 /* Session.swift */,
 				5595037F25E3B9ED00284726 /* UploadLayer.swift */,
 				5595038425E3B9EE00284726 /* URLSession+Extension.swift */,
-				5582DAC524F02CDE00863DA4 /* Info.plist */,
 				55EAECEB25E6C5F200197DAB /* ImageCacheFromURL.swift */,
+				5582DAC524F02CDE00863DA4 /* Info.plist */,
 			);
 			path = LJNetworkLayer;
 			sourceTree = "<group>";

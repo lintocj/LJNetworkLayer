@@ -1,7 +1,8 @@
 //
 //  LJError.swift
 //  NetworkLayer
-//
+//  Linto Jacob
+//  Email: lintojacob2009@gmail.com
 //  Created by linto jacob on 24/08/20.
 //  Copyright © 2020 linto. All rights reserved.
 //
@@ -36,6 +37,7 @@ public enum GeneralFailure: Error{
         case failedToCreateHttpBody
         case genericError
         case invalidURL
+        case imageDownloadError
     }
     /// The underlying reason the response serialization error occurred.
 public enum ResponseSerializationFailureReason: Error {
@@ -67,6 +69,7 @@ extension GeneralFailure: LocalizedError {
         case .failedToCreateHttpBody: return "Unable to create HTTP body parameters data"
         case .genericError: return "Something went wrong. Please try again later"
         case .invalidURL: return "Unable to create URL from given string"
+        case .imageDownloadError: return "Image Not Found"
             
         }
     }

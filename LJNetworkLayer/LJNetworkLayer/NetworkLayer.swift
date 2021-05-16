@@ -1,6 +1,7 @@
 //
 //  NetworkLayer.swift
-//  lintoResume
+//  Linto Jacob
+//  Email: lintojacob2009@gmail.com
 //
 //  Created by linto jacob on 24/08/20.
 //  Copyright © 2020 linto. All rights reserved.
@@ -17,7 +18,6 @@ public typealias ErrorHandler = (Error?, [String: Any]?) -> Void
 
 public typealias Parameters = [String: Any]
 public typealias HTTHeader = [String: String]
-public typealias CompletionHandler = (_ success: UIImageView?, _ error: Error?) -> Void
 
 
 
@@ -26,8 +26,14 @@ public enum FinalResult {
       case failure(Error)
   }
 
+public enum CompletionHandler {
+      case success(UIImageView)
+      case failure(Error)
+}
+
 let genericError = "Something went wrong. Please try again later"
 
+public let LJImageCacheConfig = ImageCacheFromURL.default
 
 public enum LJ{
     public static func request<T: Decodable>(toURL url: String,
@@ -83,20 +89,9 @@ public enum LJ{
    }
     
     
-    public static func loadImageUsingCache(imageFile : UIImageView,withUrl urlString : String, completion: @escaping CompletionHandler){
+    public static func loadImageUsingCache(imageFile : UIImageView,withUrl urlString : String, completion: @escaping (CompletionHandler) -> Void){
         ImageCacheFromURL.default.loadImageUsingCache(imageFile: imageFile, withUrl: urlString, completion: completion)
     }
  
 }
 
-
-
-
-
-
-//extension NSMutableData {
-//    func appendString(string: String) {
-//        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
-//        append(data!)
-//    }
-//}
