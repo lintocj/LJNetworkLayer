@@ -46,7 +46,15 @@ public enum LJ{
     
    }
   
-     
+    public static func requestWithFormData<T: Decodable>(toURL url: String,
+                               method: HTTPMethod = .get,
+                               parameters: Parameters = [:],
+                               headers: HTTHeader = [:],
+                               successHandler: @escaping (T) -> Void,
+                               errorHandler: @escaping ErrorHandler) {
+        Session.default.requestWithFormData(toURL: url, method: method, parameters: parameters, headers: headers, successHandler: successHandler, errorHandler: errorHandler)
+    
+   }
    
    
    
