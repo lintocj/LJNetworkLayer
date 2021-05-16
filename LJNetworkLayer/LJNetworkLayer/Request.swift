@@ -57,6 +57,36 @@ public class Request {
         return request
     }
     
+    func getPostString(params:[String:Any]) -> String
+    {
+        var data = [String]()
+        for(key, value) in params
+        {
+            data.append(key + "=\(value)")
+        }
+        return data.map { String($0) }.joined(separator: "&")
+    }
+    
+    func prepareRequestFormData(toURL url: URL,
+                                parameters: Parameters = [:],
+                                httpMethod: HTTPMethod = .get,
+                                headers: HTTHeader = [:],
+                                timeoutInterval: TimeInterval = TimeInterval(apiTimeOutInterval)) throws -> URLRequest?{
+        
+        var request = URLRequest(url: url)
+        
+        
+        request.httpMethod = httpMethod.rawValue
+        request.timeoutInterval = timeoutInterval
+        request.allHTTPHeaderFields = headers
+        
+        if parameters.count > 0{
+            let postString = self.getPostString(params: parameters)
+            request.httpBody = postString.data(using: .utf8)
+        }
+        return request
+    }
+    
 }
 
 
