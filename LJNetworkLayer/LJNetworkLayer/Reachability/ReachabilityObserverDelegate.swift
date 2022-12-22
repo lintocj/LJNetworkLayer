@@ -18,7 +18,7 @@ public protocol ReachabilityActionDelegate {
     func reachabilityChanged(_ isReachable: Bool)
 }
 
-public protocol ReachabilityObserverDelegate: class, ReachabilityActionDelegate {
+public protocol ReachabilityObserverDelegate: AnyObject, ReachabilityActionDelegate {
     func addReachabilityObserver() throws
     func removeReachabilityObserver()
 }

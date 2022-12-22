@@ -19,11 +19,11 @@ public class ImageCacheFromURL{
     }
     
     func countLimit() -> Int  {
-       return imageCache.countLimit
+        return imageCache.countLimit
     }
     
     func totalCostLimit() -> Int  {
-       return imageCache.totalCostLimit
+        return imageCache.totalCostLimit
     }
     
     func removeCacheIfCountLimitReaches(){
@@ -50,13 +50,13 @@ public class ImageCacheFromURL{
             completion(.success(imageFile))
             return
         }
-         var  activityIndicator: UIActivityIndicatorView!
+        var  activityIndicator: UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
             activityIndicator = UIActivityIndicatorView.init(style: .medium)
         } else {
             activityIndicator = UIActivityIndicatorView.init(style: .gray)
         }
-       
+
         imageFile.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         activityIndicator.center = imageFile.center
@@ -82,7 +82,7 @@ public class ImageCacheFromURL{
                     completion(.failure(GeneralFailure.imageDownloadError))
                 }
                 activityIndicator.removeFromSuperview()
-        }
+            }
 
         }).resume()
     }

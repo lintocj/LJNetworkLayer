@@ -10,9 +10,6 @@
 import Foundation
 
 public class Request {
-    
-    
-    
     func prepareRequest(toURL url: URL,
                         parameters: Parameters = [:],
                         httpMethod: HTTPMethod = .get,

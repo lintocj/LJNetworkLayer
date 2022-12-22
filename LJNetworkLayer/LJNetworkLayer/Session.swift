@@ -185,7 +185,7 @@ open class Session {
         URLSession.shared.dataTask(with: request, completionHandler: completionHandler).resume()
     }
     
-   
+
     
     public func generalRequest(toURL url: String,
                                method: HTTPMethod = .get,
@@ -248,10 +248,10 @@ open class Session {
     }
     
     public func generalRequestWithFormData(toURL url: String,
-                               method: HTTPMethod = .get,
-                               parameters: Parameters = [:],
-                               headers: HTTHeader = [:],
-                               completion: @escaping (FinalResult) -> Void, errorHandler: @escaping ErrorHandler) {
+                                           method: HTTPMethod = .get,
+                                           parameters: Parameters = [:],
+                                           headers: HTTHeader = [:],
+                                           completion: @escaping (FinalResult) -> Void, errorHandler: @escaping ErrorHandler) {
         
         let completionHandler: NetworkCompletionHandler = { (data, urlResponse, error) in
             if let error = error {
@@ -365,12 +365,10 @@ open class Session {
         
         
     }
-    
-    
 }
 
 
-extension Session{
+extension Session {
     private func isSuccessCode(_ statusCode: Int) -> Bool {
         return statusCode >= 200 && statusCode < 300
     }

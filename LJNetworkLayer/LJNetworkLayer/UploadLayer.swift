@@ -11,11 +11,7 @@ import UIKit
 
 
 final public class Upload: NSObject {
-    
-    
     public static let `default` = Upload()
-    
-    
     public var requestHttpHeaders = RestEntity()
     public var urlQueryParameters = RestEntity()
     public var httpBodyParameters = RestEntity()
@@ -47,9 +43,7 @@ final public class Upload: NSObject {
             task.resume()
         }
     }
-    
-    
-    
+
     func getData(fromURL url: URL, completion: @escaping (_ data: Data?) -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
             let sessionConfiguration = URLSessionConfiguration.default
@@ -61,11 +55,9 @@ final public class Upload: NSObject {
             task.resume()
         }
     }
-    
-    
-    
+
     func upload(files: [FileInfo], toURL url: URL,
-                withHttpMethod httpMethod: HTTPMethod, devKey: String,
+                withHttpMethod httpMethod: HTTPMethod, devKey: String? = nil,
                 completion: @escaping(_ result: Results, _ failedFiles: [String]?) -> Void) {
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
@@ -74,8 +66,9 @@ final public class Upload: NSObject {
             guard let boundary = self?.createBoundary() else { completion(Results(withError: CustomError.failedToCreateBoundary), nil); return }
             
             self?.requestHttpHeaders.add(value: "multipart/form-data; boundary=\(boundary)", forKey: "content-type")
-            self?.requestHttpHeaders.add(value: devKey, forKey: "DevKey")
-            
+            if let devKey = devKey {
+                self?.requestHttpHeaders.add(value: devKey, forKey: "DevKey")
+            }
             guard var body = self?.getHttpBody(withBoundary: boundary) else { completion(Results(withError: CustomError.failedToCreateHttpBody), nil); return }
             
             let failedFilenames = self?.add(files: files, toBody: &body, withBoundary: boundary)
@@ -95,9 +88,6 @@ final public class Upload: NSObject {
             task.resume()
         }
     }
-    
-    
-    
     
     // MARK: - Private Methods
     
@@ -119,9 +109,7 @@ final public class Upload: NSObject {
         
         return url
     }
-    
-    
-    
+
     private func getHttpBody() -> Data? {
         guard let contentType = requestHttpHeaders.value(forKey: "Content-Type") else { return nil }
         
@@ -134,9 +122,7 @@ final public class Upload: NSObject {
             return httpBody
         }
     }
-    
-    
-    
+
     private func prepareRequest(withURL url: URL?, httpBody: Data?, httpMethod: HTTPMethod) -> URLRequest? {
         guard let url = url else { return nil }
         var request = URLRequest(url: url)
@@ -175,9 +161,7 @@ public extension Upload {
             return values.count
         }
     }
-    
-    
-    
+
     struct Response {
         public var response: URLResponse?
         public var httpStatusCode: Int = 0
@@ -195,9 +179,7 @@ public extension Upload {
             }
         }
     }
-    
-    
-    
+
     struct Results {
         public var data: Data?
         public var response: Response?
@@ -213,16 +195,7 @@ public extension Upload {
             self.error = error
         }
     }
-    
-    
-    
-    
 }
-
-
-
-
-
 
 // MARK: - File Upload Related Implementation
 
@@ -244,20 +217,6 @@ public extension Upload {
     
     
     private func createBoundary() -> String? {
-        // Uncomment the following lines to create a boundary
-        // string using a UUID value. Do not forget to comment out
-        // the second way!
-        /*
-         var uuid = UUID().uuidString
-         uuid = uuid.replacingOccurrences(of: "-", with: "")
-         uuid = uuid.map { $0.lowercased() }.joined()
-         
-         let boundary = String(repeating: "-", count: 20) + uuid + "\(Int(Date.timeIntervalSinceReferenceDate))"
-         
-         return boundary
-         */
-        
-        
         // This is the second way to create a random string to use
         // with the boundary string. Comment out the following lines
         // if you want to use the first approach above!
@@ -275,23 +234,21 @@ public extension Upload {
         
         return boundary
     }
-    
-    
+
     private func getHttpBody(withBoundary boundary: String) -> Data {
         var body = Data()
         
         for (key, value) in httpBodyParameters.allValues() {
             let values = ["--\(boundary)\r\n",
-                "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n",
-                "\(value)\r\n"]
+                          "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n",
+                          "\(value)\r\n"]
             
             _ = body.append(values: values)
         }
         
         return body
     }
-    
-    
+
     private func add(files: [FileInfo], toBody body: inout Data, withBoundary boundary: String) -> [String]? {
         var status = true
         var failedFilenames: [String]?
@@ -303,8 +260,8 @@ public extension Upload {
             var data = Data()
             
             let formattedFileInfo = ["--\(boundary)\r\n",
-                "Content-Disposition: form-data; name=\"\(name)\"; filename=\"\(filename)\"\r\n",
-                "Content-Type: \(mimetype)\r\n\r\n"]
+                                     "Content-Disposition: form-data; name=\"\(name)\"; filename=\"\(filename)\"\r\n",
+                                     "Content-Type: \(mimetype)\r\n\r\n"]
             
             if data.append(values: formattedFileInfo) {
                 if data.append(values: [content]) {
@@ -335,8 +292,6 @@ public extension Upload {
     }
 }
 
-
-
 // MARK: - Data Extension
 extension Data {
     mutating func append<T>(values: [T]) -> Bool {
@@ -355,8 +310,6 @@ extension Data {
         } else {
             status = false
         }
-        
-        
         if status {
             self.append(newData)
         }
@@ -364,7 +317,3 @@ extension Data {
         return status
     }
 }
-
-
-
-

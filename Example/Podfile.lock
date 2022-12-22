@@ -1,0 +1,16 @@
+PODS:
+  - LJNetworkLayer (1.8)
+
+DEPENDENCIES:
+  - LJNetworkLayer
+
+SPEC REPOS:
+  trunk:
+    - LJNetworkLayer
+
+SPEC CHECKSUMS:
+  LJNetworkLayer: 31c81fd2beb60c116113694993d81557eb5868e3
+
+PODFILE CHECKSUM: 2411994a28dfe9c37ee2389c03890b2b9e06b698
+
+COCOAPODS: 1.8.4
