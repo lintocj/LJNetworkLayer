@@ -17,7 +17,7 @@ A generic network layer in iOS with Swift 5 using protocol programming. This is 
 To integrate LJNetworkLayer into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'LJNetworkLayer', '~> 1.8'
+pod 'LJNetworkLayer'
 ```
 
 Then run a pod install inside your terminal, or from CocoaPods.app.
