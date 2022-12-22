@@ -16,5 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: open
+     run: cd LJNetworkLayer
     - name: Build
       run: swift build -v
