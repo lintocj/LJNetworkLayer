@@ -21,3 +21,12 @@ pod 'LJNetworkLayer', '~> 1.8'
 ```
 
 Then run a pod install inside your terminal, or from CocoaPods.app.
+
+
+### Security Disclosure
+
+If you believe you have identified a security vulnerability with LJNetworkLayer, you should report it as soon as possible via email to iostech89@gmail.com. Please do not post it to a public issue tracker.
+
+## License
+
+LJNetworkLayer is released under the MIT license. See [LICENSE](https://github.com/lintocj/LJNetworkLayer/blob/master/LICENSE) for details.
