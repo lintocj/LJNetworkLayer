@@ -24,13 +24,17 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
+        
+    - name: Update RubyGems
+      run: gem update --system 3.2.3
+
 
     - name: Install dependencies
       run: |
         sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-        sudo xcode-select --install
         gem install bundler
-        bundle install
+        cd LJNetworkLayer
+        pod install
 
     - name: Run tests
       run: |
