@@ -28,7 +28,6 @@ jobs:
     - name: Install dependencies
       run: |
         sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-        sudo xcode-select --install
         gem install bundler
         bundle install
 
