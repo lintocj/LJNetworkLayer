@@ -1,22 +1,42 @@
 # This workflow will build a Swift project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
 
-name: Swift
+name: CI/CD Pipeline for iOS Project
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - main
+      - development
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: open
-     run: cd LJNetworkLayer
-    - name: Build
-      run: swift build -v
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    - name: Install dependencies
+      run: |
+        sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+        sudo xcode-select --install
+        gem install bundler
+        bundle install
+
+    - name: Run tests
+      run: |
+        xcodebuild test -workspace LJNetworkLayer.xcworkspace -scheme YourScheme -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest'
+
+    - name: Build the project
+      run: |
+        xcodebuild build -workspace LJNetworkLayer.xcworkspace -scheme YourScheme -configuration Release -sdk iphoneos
+
