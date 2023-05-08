@@ -34,7 +34,7 @@ jobs:
         sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
         gem install bundler
         cd LJNetworkLayer
-        bundle install
+        pod install
 
     - name: Run tests
       run: |
