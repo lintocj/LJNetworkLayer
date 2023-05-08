@@ -6,10 +6,10 @@ name: CI/CD Pipeline for iOS Project
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
       - development
 
 jobs:
