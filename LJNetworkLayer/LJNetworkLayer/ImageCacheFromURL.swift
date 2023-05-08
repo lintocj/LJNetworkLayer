@@ -50,6 +50,7 @@ public class ImageCacheFromURL{
             completion(.success(imageFile))
             return
         }
+        // Activity
         var  activityIndicator: UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
             activityIndicator = UIActivityIndicatorView.init(style: .medium)
